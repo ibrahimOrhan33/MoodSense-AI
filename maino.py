@@ -9,14 +9,14 @@ import glob
 from datetime import datetime
 import ollama
 
-# --- PyQt Kütüphaneleri ---
+
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QLabel, QVBoxLayout, 
                              QHBoxLayout, QWidget, QLineEdit, QPushButton, 
                              QTextEdit, QInputDialog, QMessageBox)
 from PyQt5.QtGui import QImage, QPixmap, QFont
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 
-# --- AI ve Yüz Tanıma ---
+
 from deepface import DeepFace
 try:
     import yfinance as yf
@@ -24,14 +24,12 @@ try:
 except ImportError:
     pass
 
-# ==========================================
-# 1. AYARLAR
-# ==========================================
+
 VERITABANI_YOLU = "veritabani"
 LOG_DOSYASI = "giris_kayitlari.csv"
 SOHBET_KLASORU = "sohbet_gecmisi"
 
-# Model Ayarı (Türkçe başarısı için gemma2:2b de deneyebilirsin)
+
 AI_MODEL = "llama3.2" 
 
 if not os.path.exists(VERITABANI_YOLU): os.makedirs(VERITABANI_YOLU)
@@ -39,9 +37,7 @@ if not os.path.exists(SOHBET_KLASORU): os.makedirs(SOHBET_KLASORU)
 
 AI_AKTIF = True
 
-# ==========================================
-# 2. LOGLAMA
-# ==========================================
+
 def giris_logla(kullanici, duygu, durum):
     yoktu = not os.path.exists(LOG_DOSYASI)
     simdi = datetime.now()
@@ -52,9 +48,7 @@ def giris_logla(kullanici, duygu, durum):
             writer.writerow([simdi.strftime("%Y-%m-%d"), simdi.strftime("%H:%M:%S"), kullanici, duygu, durum])
     except: pass
 
-# ==========================================
-# 3. YARDIMCI: CACHE TEMİZLEME
-# ==========================================
+
 def deepface_cache_temizle():
     try:
         pkl_files = glob.glob(os.path.join(VERITABANI_YOLU, "*.pkl"))
@@ -63,34 +57,22 @@ def deepface_cache_temizle():
             except: pass
     except Exception: pass
 
-# ==========================================
-# 4. CHAT THREAD (PROFESYONEL VE TAM CÜMLE)
-# ==========================================
+
 
 class ChatThread(QThread):
     response_signal = pyqtSignal(str)
     status_signal = pyqtSignal(str)
     
-    def __init__(self, user_message, kullanici_adi, is_first_message): # is_first_message eklendi
-        super().__init__()
-        self.user_message = user_message
-        self.kullanici_adi = kullanici_adi 
-        self.is_first_message = is_first_message # Değişkeni kaydet
-class ChatThread(QThread):
-
-    response_signal = pyqtSignal(str)
-    status_signal = pyqtSignal(str)
-
     def __init__(self, user_message, kullanici_adi, is_first_message): 
         super().__init__()
         self.user_message = user_message
         self.kullanici_adi = kullanici_adi 
-        self.is_first_message = is_first_message # Durumu sınıfa kaydettik
+        self.is_first_message = is_first_message 
 
     def run(self):
         try:
             self.status_signal.emit("MoodSense araştırıyor...")
-            # --- 1. VERİ TOPLAMA (Finans & Web) ---
+            
             toplanan_bilgiler = []
             
             # Finans Verisi
@@ -105,10 +87,9 @@ class ChatThread(QThread):
             
             # Google Arama Verisi
             try:
-                # Bilgi gerektiren soruları algıla
                 bilgi_kelimeleri = ["kim", "nedir", "neresi", "nere", "zaman", "kaç", "hangi", "başkent", "hava", "haber", "sonuç", "puan", "listele", "say"]
                 if any(x in self.user_message.lower() for x in bilgi_kelimeleri):
-                    # Detaylı bilgi için 2 sonuç çekelim
+                    # Detaylı bilgi için 2 sonuç çektim
                     search_results = search(self.user_message, num_results=2, advanced=True)
                     for r in search_results:
                         if r.description:
@@ -118,18 +99,23 @@ class ChatThread(QThread):
 
             context_data = "\n".join(toplanan_bilgiler)
             tarih = datetime.now().strftime("%d %B %Y")
-            
-            # --- 2. SİSTEM PROMPTU (PROFESYONEL AYAR) ---
-            # Burada modele "Tam Cümle" kurma ve kurumsal olma talimatı veriyoruz.
-            # --- ENTEGRE EDİLMİŞ GÜÇLÜ SİSTEM PROMPTU ---
-            # Selamlama talimatını dinamik yapıyoruz
-        
+
+            if self.is_first_message:
+                kimlik_bilgisi = f"Kullanıcı Adı: {self.kullanici_adi}. Onu ismiyle selamla."
+                selamlama_talimati = "Nazik bir karşılama yap."
+            else:
+                # İkinci mesajdan itibaren ismini prompttan siliyoruz ve yasak koyuyoruz.
+                kimlik_bilgisi = "Kullanıcı ile halihazırda sohbettesin."
+                selamlama_talimati = "ASLA 'Merhaba', 'Selam', 'İyi günler' deme. ASLA kullanıcının ismini (İbrahim Orhan vb.) zikretme. Doğrudan bilgi ver."     
             
             system_prompt = (
-                f"Senin adın MoodSense. Tarih: {tarih}. Kullanıcı: {self.kullanici_adi}.\n"
+                f"Senin adın MoodSense. Tarih: {tarih}. {kimlik_bilgisi}\n" # Değişken buraya ekledim
+                "Görevin: Profesyonel, bilgili, ciddi ve yardımsever bir asistan olmaktır.\n"
+                "KESİN KURALLAR:\n"
+                f"1. SELAMLAMA VE İSİM KURALI: {selamlama_talimati}\n" # En önemli kuralı başa aldım
                 "Görevin: Kullanıcıya profesyonel, bilgili, ciddi ve aynı zamanda yardımsever bir asistan olarak hizmet vermektir.\n"
                 "KESİN KURALLAR:\n"
-                "1. CEVAP TARZI VE DİL: Cevapların tamamen Türkçe olmalı. 'current', 'location' gibi İngilizce kelimeleri asla kullanma. BAŞLIK YASAĞI: Cevabına asla 'Cevap:', 'MoodSense:', 'EK BİLGİLER:' veya 'WEB BİLGİSİ:' gibi başlıklarla başlama. Doğrudan cümleye gir.\n "
+                "CEVAP TARZI VE DİL: Cevapların tamamen Türkçe olmalı. 'current', 'location' gibi İngilizce kelimeleri asla kullanma. BAŞLIK YASAĞI: Cevabına asla 'Cevap:', 'MoodSense:', 'EK BİLGİLER:' veya 'WEB BİLGİSİ:' gibi başlıklarla başlama. Doğrudan cümleye gir.\n "
                 "Asla robotik ve tek kelimelik cevaplar verme; mutlaka dil bilgisi kurallarına uygun, tam cümleler kur. "
                 "(Örn: Yanlış: 'Ankara.', Doğru: 'Türkiye'nin başkenti Ankara'dır.').\n"
                 "2. ÜSLUP VE CİDDİYET: 'Hocam', 'Kardeş' gibi ifadeler kullanma; samimi ama profesyonel mesafeyi koruyan bir dost gibi konuş. SELAMLAMA KONTROLÜ: Kullanıcıyla zaten sohbettesin. Her mesajda 'Merhaba', 'İyi günler' veya 'Sana nasıl yardımcı olabilirim' gibi girişler yapma. Sadece soruya odaklan.\n "
@@ -143,13 +129,13 @@ class ChatThread(QThread):
 
             messages = [{'role': 'system', 'content': system_prompt}]
             
-            # --- 3. HAFIZA YÜKLEME ---
+            # Hafıza yüklme kısmı 
             if self.kullanici_adi:
                 try:
                     dosya_yolu = os.path.join(SOHBET_KLASORU, f"{self.kullanici_adi}_sohbet.txt")
                     if os.path.exists(dosya_yolu):
                         with open(dosya_yolu, "r", encoding="utf-8") as f:
-                            # Son 6 mesajı alalım ki bağlam kopmasın ama eski hatalar da gelmesin
+                            # Son 6 mesajı aldım ki bağlam kopmasın ama eski hatalarla karşılaşmayayım.
                             satirlar = f.readlines()[-6:] 
                             for satir in satirlar:
                                 if "Ben:" in satir:
@@ -160,16 +146,16 @@ class ChatThread(QThread):
                                     messages.append({'role': 'assistant', 'content': icerik})
                 except: pass
 
-            # --- 4. YENİ MESAJ ---
+            # Yeni mesaj kısmı 
             messages.append({'role': 'user', 'content': self.user_message})
 
-            # --- 5. OLLAMA ÇAĞRISI ---
+            # Ollama kısmı 
             self.status_signal.emit("MoodSense düşünüyor...")
 
             response = ollama.chat(
                 model=AI_MODEL, 
                 messages=messages,
-                options={'temperature': 0.1} # Ciddiyet ve tutarlılık için düşük sıcaklık
+                options={'temperature': 0.1} # Ciddi ve tutarlı olması için sıcaklık yani canayakınlığı düşük tuttum.
             )
             
             ai_text = response['message']['content']
@@ -178,9 +164,9 @@ class ChatThread(QThread):
         except Exception as e:
             self.response_signal.emit(f"Hata: {str(e)}")
 
-# ==========================================
-# 5. GÜVENLİK THREAD (FACENET512)
-# ==========================================
+
+# Güvenlik thread, burada FACENET512 kullandım. Unutma, önemli.
+
 class GuvenlikThread(QThread):
     change_pixmap_signal = pyqtSignal(np.ndarray)
     status_signal = pyqtSignal(str)
@@ -265,9 +251,8 @@ class GuvenlikThread(QThread):
             self.change_pixmap_signal.emit(cv_img)
         cap.release()
 
-# ==========================================
-# 6. ANA PENCERE
-# ==========================================
+# Ana pencerenin olduğu kısım.
+
 class MoodSenseWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -277,6 +262,7 @@ class MoodSenseWindow(QMainWindow):
         
         self.kullanici_adi = None 
         self.anlik_duygu = None
+        self.is_first_ai_message = True
         self.chat_worker = None
         self.thread = None
         
@@ -289,7 +275,7 @@ class MoodSenseWindow(QMainWindow):
         self.main_layout = QHBoxLayout()
         self.central_widget.setLayout(self.main_layout)
 
-        # --- SOL PANEL ---
+        # Sola yaslama yaptım.
         self.camera_container = QWidget()
         self.left_layout = QVBoxLayout()
         self.camera_container.setLayout(self.left_layout)
@@ -337,7 +323,7 @@ class MoodSenseWindow(QMainWindow):
         self.left_layout.addStretch() 
         self.main_layout.addWidget(self.camera_container)
 
-        # --- SAĞ PANEL (SOHBET) ---
+        # Sağa yaslama kısmı.
         self.chat_container = QWidget()
         self.right_layout = QVBoxLayout()
         self.chat_container.setLayout(self.right_layout)
@@ -348,10 +334,10 @@ class MoodSenseWindow(QMainWindow):
         self.chat_header.setStyleSheet("color: #666;")
         self.right_layout.addWidget(self.chat_header)
 
-        # AI Asistan Başlığının Altına Butonu Ekle
+        # AI Asistan başlığının altına buton ekledim
         self.btn_logout = QPushButton("Ana Sayfaya Dön")
         self.btn_logout.setFixedHeight(35)
-        # Butona kırmızımsı/uyarıcı bir renk veriyoruz
+        # Bu da butonun rengi kırmızımsı yaptım.
         self.btn_logout.setStyleSheet("background-color: #c62828; color: white; font-weight: bold; border-radius: 5px; margin: 5px;")
         self.right_layout.addWidget(self.btn_logout)
 
@@ -490,6 +476,8 @@ class MoodSenseWindow(QMainWindow):
         self.msg_input.setFocus()
         giris_logla(isim, duygu, "Giris Basarili")
         self.gecmisi_yukle()
+
+        self.is_first_ai_message = False
         
         if AI_AKTIF:
             duygu_lower = duygu.lower()
@@ -532,7 +520,7 @@ class MoodSenseWindow(QMainWindow):
         self.chat_ekle("Ben", text)
         self.msg_input.clear()
         self.msg_input.setEnabled(False) 
-        self.chat_worker = ChatThread(text, self.kullanici_adi)
+        self.chat_worker = ChatThread(text, self.kullanici_adi, False)
         self.chat_worker.response_signal.connect(self.ai_cevap_geldi)
         self.chat_worker.status_signal.connect(self.lbl_typing.setText)
         self.chat_worker.start()
@@ -541,36 +529,24 @@ class MoodSenseWindow(QMainWindow):
     def oturum_kapat(self):
         """Oturumu kapatır, log kaydı tutar ve arayüzü ana sayfaya döndürür."""
         if self.kullanici_adi:
-            # 1. Mevcut loglama mantığını korur
+            # 1. Mevcut loglama mantığını koruduğum kısım
             giris_logla(self.kullanici_adi, self.anlik_duygu, "Cikis Yapildi")
             deepface_cache_temizle()
         
-        # 2. Değişkenleri sıfırla
+        # 2. Değişkenleri sıfırlama kısmı
         self.kullanici_adi = None
         self.anlik_duygu = None
+        self.is_first_ai_message = True
         self.chat_area.clear()
         
-        # 3. Başlığı ve stilleri varsayılana döndür
+        # 3. Başlığı ve stilleri varsayılana döndürmek için;
         self.chat_header.setText("AI Asistan")
         self.chat_header.setStyleSheet("color: #666;")
         
-        # 4. Arayüzü eski haline getir
+        # 4. Arayüzü eski haline getirmeyi de unutmamlıyım.
         self.chat_container.hide()
         self.camera_container.show()
         self.sistem_bosta_modu()
-
-#    def oturum_kapat(self):
-#        if self.kullanici_adi:
-#            giris_logla(self.kullanici_adi, self.anlik_duygu, "Cikis Yapildi")
-#            deepface_cache_temizle()
-#        self.kullanici_adi = None
-#        self.anlik_duygu = None
-#        self.chat_area.clear()
-#        self.chat_header.setText("AI Asistan")
-#        self.chat_header.setStyleSheet("color: #666;")
-#        self.chat_container.hide()
-#        self.camera_container.show()
-#        self.sistem_bosta_modu()
 
     def ai_cevap_geldi(self, cevap):
         self.lbl_typing.setText("")
@@ -579,15 +555,15 @@ class MoodSenseWindow(QMainWindow):
         self.msg_input.setFocus()
 
     def chat_ekle(self, sender, msg):
-        # 1. Renk, hizalama ve arka plan belirle
+        # 1. Renk, hizaladım ve arka planı belirledim.
         if sender == "Ben":
             color = "#00ff00"
             align = "right"
-            bg_color = "#1b331b" # Kullanıcı mesajı yeşilimsi
+            bg_color = "#1b331b" # Kullanıcı yani örn benim mesajım yeşilimsi olacak.
         elif sender == "MoodSense":
             color = "#00d2ff"
             align = "left"
-            bg_color = "#1b2733" # AI mesajı mavimsi
+            bg_color = "#1b2733" # AI yani yapay zekanın rengi mavi olacak.
         else:
             color = "white"
             align = "center"
@@ -595,7 +571,7 @@ class MoodSenseWindow(QMainWindow):
 
         msg_html = msg.replace("\n", "<br>")
         
-        # 2. %100 genişlikte bir tablo ile kesin sağ/sol hizalaması yap
+        # %100 genişlikte bir tablo ile kesin sağ/sol hizalaması yapmaya çalıştım.
         full_html = f"""
         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
             <tr>
@@ -610,10 +586,10 @@ class MoodSenseWindow(QMainWindow):
         """
         self.chat_area.append(full_html)
         
-        # 3. Otomatik olarak en aşağı kaydır
+        # Otomatik olarak en aşağı kaydırma srollBar ekleyerek yapılabilir.
         self.chat_area.verticalScrollBar().setValue(self.chat_area.verticalScrollBar().maximum())
 
-        # 4. KULLANICIYA ÖZEL GEÇMİŞ DOSYASINA KAYDET (Kritik kısım)
+        # Kullanıcıya özel geçmiş dosyası oluşturup içine kaydetmem lazım çok önemlii (Kritik kısım)
         if self.kullanici_adi and sender != "Sistem":
             try:
                 clean_msg = msg.replace("\n", " ")
@@ -622,20 +598,6 @@ class MoodSenseWindow(QMainWindow):
                     f.write(f"[{datetime.now().strftime('%d-%m %H:%M')}] {sender}: {clean_msg}\n")
             except: 
                 pass    
-
-#    def chat_ekle(self, sender, msg):
- #       color = "#00d2ff" if sender == "MoodSense" else "#00ff00"
- #       align = "left" if sender == "MoodSense" else "right"
- #       msg = msg.replace("\n", "<br>")
- #       html_msg = f"<div style='margin-bottom:10px; text-align:{align};'><span style='color:{color}; font-weight:bold;'>{sender}</span><br><span style='font-size:15px;'>{msg}</span></div>"
- #       self.chat_area.append(html_msg)
- #       if self.kullanici_adi:
- #           try:
-  #              clean_msg = msg.replace("<br>", " ")
-   #             dosya = f"{SOHBET_KLASORU}/{self.kullanici_adi}_sohbet.txt"
-    #            with open(dosya, "a", encoding="utf-8") as f:
-     #               f.write(f"[{datetime.now().strftime('%d-%m %H:%M')}] {sender}: {clean_msg}\n")
-      #      except: pass
 
     def closeEvent(self, event):
         if self.thread: self.thread.stop()
