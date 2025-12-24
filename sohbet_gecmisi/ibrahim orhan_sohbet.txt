@@ -1,0 +1,106 @@
+[09-12 13:01] MoodSense: Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?
+[09-12 13:01] Ben: Türkiyenin başkenti neresidir
+[09-12 13:01] MoodSense: Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin başkentliğini 1923 yılından beri sürdürüyor ve ülkenin siyasi, ekonomik ve kültürel merkezleri arasında yer alıyor.
+[09-12 13:03] Sistem: Güle güle Ibrahim orhan! Oturum kapatılıyor...
+[10-12 14:20] MoodSense: Ibrahim orhan, endişeli görünüyorsun. Her şey yolunda mı?
+[10-12 14:20] Ben: TBMM ne zaman kuruldu acaba?
+[10-12 14:21] MoodSense: TBMM (Türkiye Büyük Millet Meclisi ) 1920 yılında kuruldu ve ilk kez 7 Mart 1921'de toplanmaya başladı. Bu, Türkiye'nin modern cumhuriyetini kurma sürecinde önemli bir adım olarak kabul edilir.  TBMM, Türkiye'nin anayasal yapısını oluşturuyor ve ülkenin siyasi liderlerini belirlemek için bir platforma serving.
+[10-12 14:21] Ben: Gün ay yıl şeklinde söylemek gerekirse ne zaman kuruldu peki
+[10-12 14:21] MoodSense: TBMM'nin kuruluşu, 1920 yılında başlayan ve 1921 yılında tamamlanan bir süreçti. Bu nedenle, TBMM'nin kurulduğu exact tarih olarak 9 Mart 1921'de sayılabilir.  Ayrıca, Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün 10 Ekim 1923'te cumhuriyetin ilan edildiği gün, TBMM'nin ilk toplantısı 11 Kasım 1923'te gerçekleşti.
+[10-12 14:22] Ben: HAngi ayda kuruldu
+[10-12 14:22] MoodSense: TBMM, Mart ayında kuruldu.
+[10-12 14:22] Ben: Doğrusu gün ay yıl olarak istediğimde 23 Nisan 1920 demeleiydin bu da aklında bulunsun
+[10-12 14:22] MoodSense: Hakkımda haklıyorsun. TBMM'nin kuruluşu, 23 Nisan 1920'de gerçekleşti. Bu tarih, Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün Ankara'daki Kongre Meclisi'ne liderlik ettiği gün olarak kabul edilir.  Kurulduğu tarih olarak 23 Nisan 1920'i kullanmak daha doğru olurdu.
+[10-12 14:23] Ben: Bundan sonra soru sorduğumda resmiyete geçiş tarihlerine dikkat et lütfen
+[10-12 14:23] MoodSense: Hem TBMM'nin kuruluşu, hem de Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün Ankara'daki Kongre Meclisi'ne liderlik ettiği gün olarak kabul edilen 23 Nisan 1920, resmiyete geçiş tarihleri arasında sayılabilir.  Daha sonra, cumhuriyetin ilan edildiği gün, 10 Ekim 1923 ve cumhurbaşkanı seçildiği gün, 29 Ekim 1923, resmiyete geçiş tarihleri olarak kabul edilir.
+[10-12 14:23] Ben: Ayrıca şu an bir dolar kaç TL
+[10-12 14:23] MoodSense: Doların güncel fiyatı 42.58 TL'dir.
+[23-12 16:22] MoodSense: Ooo Ibrahim orhan hoş geldin! Yüzünde güller açıyor, enerjin harika!
+[23-12 16:23] Ben: Türkiyenin başkenti neresidir
+[23-12 16:23] MoodSense: Türkiye'nin başkenti Ankara'dır. Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün Ankara'daki Kongre Meclisi'ne liderlik ettiği gün olarak kabul edilen 23 Nisan 1920, resmiyete geçiş tarihleri arasında sayılabilir.
+[23-12 16:23] Ben: şu an 1 dolar kaç tl
+[23-12 16:23] MoodSense: Doların güncel fiyatı 42.58 TL'dir.
+[23-12 21:41] MoodSense: Ooo Ibrahim orhan hoş geldin! Yüzünde güller açıyor, enerjin harika!
+[23-12 21:41] Ben: Türkiyenin başkenti neresidir
+[23-12 21:41] MoodSense: Türkiye'nin başkenti Ankara'dır. Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün Ankara'daki Kongre Meclisi'ne liderlik ettiği gün olarak kabul edilen 23 Nisan 1920, resmiyete geçiş tarihleri arasında sayılabilir.
+[23-12 21:41] Ben: şu an 1 dolar kaç tl
+[23-12 21:41] MoodSense: Doların güncel fiyatı 42.58 TL'dir.
+[23-12 21:41] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[23-12 21:42] Ben: merhaba türkiyenin başkenti neredir
+[23-12 21:42] MoodSense: Merhaba! Türkiye'nin başkenti Ankara'dır.
+[22:10] MoodSense: Doların güncel fiyatı 42.58 TL'dir.
+[22:10] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[22:10] Ben: merhaba türkiyenin başkenti neredir
+[22:10] MoodSense: Merhaba! Türkiye'nin başkenti Ankara'dır.
+[22:10] MoodSense: Hoş geldin Ibrahim orhan. Bugün oldukça odaklanmış ve ciddi görünüyorsun.
+[22:11] Ben: Türkiyenin posta koodu nedir
+[22:11] MoodSense: Türkiye'nin posta kodu 40000'dir.
+
+EK BİLGİLER: Posta kodları, Türkiye'nin farklı illerinin sınırlarına göre değişmektedir. above-mentioned
+[23-12 22:13] MoodSense: Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?
+[23-12 22:13] Ben: Tükiyenin telefon kodu nedir
+[23-12 22:13] MoodSense: Türkiye'nin telefon kodu +90'dur.  Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?  EK BİLGİLER: - Türkiye, Avrupa ve Asya'nın en büyük ülkelerinden biridir. - 84 milyon nüfusuyla dünyanın en kalabalık ikinci ülkesidir. - Ankara, İstanbul ve İzmir gibi büyük şehirleri içerir.
+[23-12 22:15] MoodSense: Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?
+[23-12 22:15] Ben: Tükiyenin telefon kodu nedir
+[23-12 22:15] MoodSense: Türkiye'nin telefon kodu +90'dur.  Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?  EK BİLGİLER: - Türkiye, Avrupa ve Asya'nın en büyük ülkelerinden biridir. - 84 milyon nüfusuyla dünyanın en kalabalık ikinci ülkesidir. - Ankara, İstanbul ve İzmir gibi büyük şehirleri içerir.
+[23-12 22:15] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[23-12 22:15] Ben: Türkiyenin başkenti neresdir
+[23-12 22:15] MoodSense: Ankara, Türkiye'nin başkentidir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezi olarak kabul edilir.  Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?  EK BİLGİLER: - Türkiye, Avrupa ve Asya'nın en büyük ülkelerinden biridir. - 84 milyon nüfusuyla dünyanın en kalabalık ikinci ülkesidir. - Ankara, İstanbul ve İzmir gibi büyük şehirleri içerir.  Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[23-12 22:16] Ben: tükiyede aç il vardır
+[23-12 22:16] MoodSense: Tükiye'de aç ilinin adı Kütahya'dır. Kütahya, Türkiye'nin western bölgesinde yer alan ve 9.000 km² alana sahip bir ilidir. Kütahya, Türkiye'nin en az nüfusu bulunan ilidir.  Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?  EK BİLGİLER: - Türkiye, Avrupa ve Asya'nın en büyük ülkelerinden biridir. - 84 milyon nüfusuyla dünyanın en kalabalık ikinci ülkesidir. - Ankara, İstanbul ve İzmir gibi büyük şehirleri içerir.
+[23-12 22:16] Ben: Türkiyede kaç  il vardır
+[23-12 22:16] MoodSense: Türkiye, 81 il ile sınıflandırılır. Bu 81 il, Türkiye'nin farklı bölgelerini temsil eder ve her biri own unique kültürel, tarihi ve coğrafi özelliklere sahiptir.  Ayrıca, Türkiye'de 973 ilçe ve 1.133 bucak bulunmaktadır.
+[22:24] MoodSense: Selam Ibrahim orhan, bugün çok ciddi ve odaklanmışsın.
+[22:24] Ben: Selam türkiyenin başkenti neresidir
+[22:24] MoodSense: Selam, Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.  Ankara, 1923 yılında Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk tarafından foundedırılmıştır.
+
+EK BİLGİLER:
+- Ankara, Türkiye'nin en büyük şehridir.
+- Ankara, Türkiye'nin başkentinin yanı sıra, Avrupa'nın en büyük şehirlerinden biridir.
+- Ankara, Türkiye'nin historyen önemli şehirlerinden biridir ve birçok tarihi siteye ev sahipliği yapmaktadır.
+[22:26] MoodSense: Selam Ibrahim orhan, bugün çok ciddi ve odaklanmışsın.
+[22:26] Ben: Türkiyenin başkenti neredir
+[22:26] MoodSense: EK BİLGİLER: Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.
+
+Ankara, Türkiye'nin en büyük ikinci şehri ve country capital (ulusal başkent) olarak da bilinir. Şehir, Türkiye'nin history of conflict ve modernization during the Ottoman Empire periodinde önemli bir rol oynamıştır.
+
+Ankara, Türkiye'nin başkenti olarak 1923 yılında Mustafa Kemal Atatürk tarafından kurulmuştur. Şehrin modernleşmesi ve gelişmesi, Türkiye'nin modernleşme sürecinin önemli bir parçasıdır.
+[24-12 01:07] MoodSense: EK BİLGİLER: Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.
+[24-12 01:07] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[24-12 01:08] Ben: Türkiyenin başkenti neresidir
+[24-12 01:08] MoodSense: Cevap: Türkiye'nin başkenti Ankara'dır.  Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.  Ek bilgi: Ankara, Türkiye'nin en büyük ikinci şehri ve 2023 yılı itibarıyla 6 milyon nüfusu bulunan bir şehirdir.
+[24-12 01:10] MoodSense: EK BİLGİLER: Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.
+[24-12 01:10] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[24-12 01:10] Ben: Türkiyenin başkenti neresidir
+[24-12 01:10] MoodSense: Cevap: Türkiye'nin başkenti Ankara'dır.  Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.  Ek bilgi: Ankara, Türkiye'nin en büyük ikinci şehri ve 2023 yılı itibarıyla 6 milyon nüfusu bulunan bir şehirdir.
+[24-12 01:10] MoodSense: Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?
+[24-12 01:14] MoodSense: Hoş geldin Ibrahim orhan. Biraz gergin gibisin, sakin ol şampiyon.
+[24-12 01:15] Ben: Türkiyenin başkenti neresidir
+[24-12 01:15] MoodSense: Cevap: Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.  Ek bilgi: Ankara, Türkiye'nin en büyük ikinci şehri ve 2023 yılı itibarıyla 6 milyon nüfusu bulunan bir şehirdir.  Türkiye'nin başkenti olarak Ankara'nın historyası ve önemi hakkında daha fazla bilgi almak istiyorsanız, bana sorarsınız.
+[24-12 01:16] Sistem: Güle güle Ibrahim orhan! Oturum kapatılıyor...
+[24-12 01:43] MoodSense: Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?
+[24-12 01:43] Ben: Selam Türkiyenin başkkenti neresidir acaba
+[24-12 01:43] MoodSense: Cevap: Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin central locationunda yer alan ve 1930 yılında başkent olarak belirlenen bir şehirdir. Ankara, Türkiye'nin siyasi, ekonomik ve kültürel merkezidir.  Ek bilgi: Ankara, Türkiye'nin en büyük ikinci şehri ve 2023 yılı itibarıyla 6 milyon nüfusu bulunan bir şehirdir.
+[24-12 01:55] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[24-12 01:55] Ben: 1 dolar kaç  tl
+[24-12 01:55] MoodSense: Cevap: Doların current fiyatı 42.84 TL'dir.
+[24-12 02:11] MoodSense: Selam Ibrahim orhan. Bugün gayet ciddi ve odaklanmış görünüyorsun. Senin için ne yapabilirim?
+[24-12 02:11] Ben: 2 euro  kaç tl eder
+[24-12 02:11] MoodSense: Cevap: Euro'un current fiyatı 50.69 TL'dir.  Merhaba Ibrahim orhan, sen de iyi günler. Senin için ne yapabilirim?
+[24-12 02:12] Ben: türkiyenin başkenti neresidir
+[24-12 02:12] MoodSense: Hocam, Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin en büyük şehri ve siyasi, ekonomik ve kültürel merkezidir.  Ankara, Türkiye'nin historyen önemli şehirlerinden birisidir.
+[24-12 02:22] MoodSense: Ooo Ibrahim orhan hoş geldin! Yüzünde güller açıyor, enerjin harika!
+[24-12 02:22] Ben: Türkiyenin başkenti neresidir
+[24-12 02:22] MoodSense: İyi günler Ibrahim orhan, Türkiye'nin başkenti Ankara'dır. Ankara, Türkiye'nin en büyük şehri ve siyasi, ekonomik ve kültürel merkezidir.
+[24-12 02:23] Ben: 2 dolar kaç tl dir
+[24-12 02:23] MoodSense: Sana nasıl yardımcı olabilirim? Doların TL'ye çevirisi için, currently 42.83 TL'dir. Bu information 24 December 2025 tarihine göre değişebilir.
+[24-12 02:23] Ben: 1 dolar kaç tl
+[24-12 02:23] MoodSense: İyi günler Ibrahim orhan! Doların TL'ye çevirisi için, currently 42.83 TL'dir. Bu information 24 December 2025 tarihine göre değişebilir.
+[24-12 13:26] MoodSense: Ooo Ibrahim orhan hoş geldin! Yüzünde güller açıyor, enerjin harika!
+[24-12 13:26] Ben: Türkiyenin başkenti neresidir?
+[24-12 13:26] MoodSense: Merhaba Ibrahim orhan! Türkiye'nin başkenti Ankara'dır.
+[24-12 13:27] Ben: Türkiyede kaç il vardır?
+[24-12 13:27] MoodSense: İyi günler Ibrahim orhan! Türkiye'de 81 il bulunmaktadır.
+[24-12 13:58] MoodSense: Merhaba Ibrahim orhan. Seni biraz durgun gördüm, canını sıkan bir şey mi var?
+[24-12 13:59] Ben: Türkiyenin başkenti neresidir
+[24-12 13:59] MoodSense: İyi günler Ibrahim orhan! Türkiye'nin başkenti Ankara'dır.
